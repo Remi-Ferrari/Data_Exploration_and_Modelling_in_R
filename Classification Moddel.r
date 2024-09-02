@@ -2,11 +2,11 @@
 Clasification Model
 '''
 
->set.seed(100)
+> set.seed(100)
 > 
->TrainingIndex <- createDataPartition(iris$Species, p=0.8, list = FALSE)
->TrainingSet <- iris[TrainingIndex,] 
->TestingSet <- iris[-TrainingIndex,]
+> TrainingIndex <- createDataPartition(iris$Species, p=0.8, list = FALSE)
+> TrainingSet <- iris[TrainingIndex,] 
+> TestingSet <- iris[-TrainingIndex,]
 >
 > Model <- train(Species ~ ., data = TrainingSet,
 +                method = "svmPoly",
@@ -25,3 +25,6 @@ Clasification Model
 > Model.training <-predict(Model, TrainingSet)   
 > Model.testing <-predict(Model, TestingSet)    
 > Model.cv <-predict(Model.cv, TrainingSet) 
+> print(Model.training.confusion)
+> print(Model.testing.confusion)
+> print(Model.cv.confusion)
