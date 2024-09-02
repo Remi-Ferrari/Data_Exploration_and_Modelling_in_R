@@ -25,6 +25,11 @@ Clasification Model
 > Model.training <-predict(Model, TrainingSet)   
 > Model.testing <-predict(Model, TestingSet)    
 > Model.cv <-predict(Model.cv, TrainingSet) 
+>
 > print(Model.training.confusion)
 > print(Model.testing.confusion)
 > print(Model.cv.confusion)
+>
+> Importance <- varImp(Model)
+> plot(Importance)
+> plot(Importance)
