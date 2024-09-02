@@ -17,7 +17,7 @@ Additionally, the file displays code used for the observation of the functioning
 +                preProcess=c("scale","center"),
 +                trControl= trainControl(method="none"),
 +                tuneGrid = data.frame(degree=1,scale=1,C=1),
-                 probability = TRUE
++                probability = TRUE
 + )
 > Model.cv <- train(Species ~ ., data = TrainingSet,
 +                   method = "svmPoly",
@@ -25,7 +25,7 @@ Additionally, the file displays code used for the observation of the functioning
 +                   preProcess=c("scale","center"),
 +                   trControl= trainControl(method="cv", number=10),
 +                   tuneGrid = data.frame(degree=1,scale=1,C=1),
-                    probability = TRUE
++                   probability = TRUE
 + )
 > Model.training <-predict(Model, TrainingSet)   
 > Model.testing <-predict(Model, TestingSet)    
