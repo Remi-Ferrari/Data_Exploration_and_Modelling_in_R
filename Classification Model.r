@@ -1,7 +1,8 @@
 '''
 Clasification Model
 
-This file showcases code used for the construction of the Classification model. Additionally, the file displays code used for the observation of the functioning of the model. 
+This file showcases code used for the construction of the Classification model.
+Additionally, the file displays code used for the observation of the functioning of the model. 
 '''
 
 > set.seed(100)
