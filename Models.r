@@ -29,7 +29,7 @@ Model <- train(Species ~ ., data = TrainingSet,
                na.action = na.omit,
                preProcess=c("scale","center"),
                trControl= trainControl(method="none"),
-               tuneGrid = data.frame(degree=1,scale=1,C=1)
+               tuneGrid = data.frame(sigma=1, C=1)
 )
 
 #svmRadial Cross-validation
@@ -38,7 +38,7 @@ Model.cv <- train(Species ~ ., data = TrainingSet,
                   na.action = na.omit,
                   preProcess=c("scale","center"),
                   trControl= trainControl(method="cv", number=10),
-                  tuneGrid = data.frame(degree=1,scale=1,C=1)
+                  tuneGrid = data.frame(sigma=1, C=1)
 )
 #svmLinear
 Model <- train(Species ~ ., data = TrainingSet,
